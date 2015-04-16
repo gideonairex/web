@@ -1,0 +1,22 @@
+build_image: yamii/webb:pom
+# build_image: shipimg/ubuntu1204_nodejs:latest
+#language setting
+language: node_js
+node_js:
+  - 0.10.35
+
+before_install:
+  - npm install
+  - npm install -g mocha
+
+script:
+  - mocha
+
+# archive: true
+
+# after_script:
+#   - ./node_modules/.bin/mocha -R xunit ./test > shippable/testresults/result.html
+
+#after_success:
+
+#after_failure:

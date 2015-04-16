@@ -3,6 +3,8 @@
 var Hapi = require( 'hapi' );
 var server = new Hapi.Server();
 
+console.log( 'yami' );
+console.log( 'testing' );
 server.connection( {
 	'port' : 9898
 } );
@@ -47,7 +49,7 @@ server.route( [
 		'method' : 'GET',
 		'path' : '/v1/world',
 		'handler' : function ( request, reply ) {
-			return reply( 'World Tour!!!' );
+			return reply( 'World Tour Yey!!!' );
 		}
 	}
 ] );
@@ -58,5 +60,5 @@ server.start( function ( error ) {
 		throw error;
 	}
 
-	console.log( 'Server started' );
+	console.log( 'Server started ' + server.info.uri );
 } );

@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-		"start" : "node ."
+    "start": "node .",
+    "test": "mocha"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "hapi": "^8.4.0"
+    "hapi": "^8.4.0",
+    "mocha": "^2.2.1",
+    "should": "^5.2.0"
   }
 }
